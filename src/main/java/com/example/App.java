@@ -4,6 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
+import com.example.paint.AddRunDto;
+import com.example.paint.AppPaint;
+import com.example.paint.AppPaintImpl;
+import com.example.paint.Configuration;
+import com.example.paint.Point;
+
 /**
  * Hello world!
  *
@@ -12,6 +18,18 @@ public class App
 {
     public static void main( String[] args )
     {
+        
+        AppPaint paint =AppPaintImpl.builder()
+            .setCanvas(Configuration.canvasFactory(System.out::println))
+            .setColors(Configuration.colorFactory())
+            .setCommnads(Configuration.commandFactory())
+            .setShapes(Configuration.shapeFactory())
+            .build();
+
+        paint.run(new AddRunDto("add", 
+                    "rectangle", "black", 
+                    new Point(10,10), new Point(100,100)));
+
         System.out.println(Math.PI);
         //Math.PI = 4; error
         

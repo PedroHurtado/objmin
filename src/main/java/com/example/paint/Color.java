@@ -44,4 +44,8 @@ public class Color {
             return false;
         return true;
     }
+    @Override
+    public String toString() {
+        return "Color [red=" + red + ", green=" + green + ", blue=" + blue + "]";
+    }
 }

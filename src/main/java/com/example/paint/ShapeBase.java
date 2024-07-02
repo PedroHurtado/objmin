@@ -41,7 +41,7 @@ public abstract class ShapeBase implements Shape{
     }
     @Override
     public String toString() {
-        return "ShapeBase [pointStart=" + pointStart + ", pointEnd=" + pointEnd + ", color=" + color + "]";
+        return "[pointStart=" + pointStart + ", pointEnd=" + pointEnd + ", color=" + color.toString() + "]";
     }
     @Override
     public Boolean getCanDraw(){
