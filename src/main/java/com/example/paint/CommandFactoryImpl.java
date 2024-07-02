@@ -10,8 +10,10 @@ public class CommandFactoryImpl implements CommandFactory {
     }
     @Override
     public CommandBase getCommand(String key, Canvas canvas, Shape shape){
-        var command = commands.get(key);
-        //TODO->LANZAR EXCEPTION SI EL COMANDO NO EXISTE
+        var command = commands.get(key);        
+        if(command == null){
+            throw new RuntimeException();
+        }
         return command.apply(canvas, shape);
     }
 }
