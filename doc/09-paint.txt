@@ -1,0 +1,14 @@
+Application
+    ToolBar
+        Shapes
+        Colors
+    Canvas
+SOLID Y PATRONES DE DISEÑO
+    -CommandPattern
+        Receptor->Canvas
+        Datos->
+            Add-Shape
+            Remove->id
+    -Factory
+        add rectangle 12,15 100,30 black
+        add Rectangle(PointStart, PointEnd, Color)
