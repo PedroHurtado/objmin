@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.function.Consumer;
 
 import com.example.paint.AddRunDto;
+import com.example.paint.AppBuilder;
 import com.example.paint.AppPaint;
 import com.example.paint.AppPaintImpl;
 import com.example.paint.Configuration;
@@ -18,16 +19,25 @@ public class App
 {
     public static void main( String[] args )
     {
-        
-        AppPaint paint =AppPaintImpl.builder()
-            .setCanvas(Configuration.canvasFactory(System.out::println))
-            .setColors(Configuration.colorFactory())
-            .setCommnads(Configuration.commandFactory())
-            .setShapes(Configuration.shapeFactory())
+        //Consumer<String> print = (str)->{};
+
+        var paint=AppPaintImpl.builder()
+            //.setCanvas(Configuration.createCanvas(System.out::println))
+            .setCanvas(Configuration.createCanvas(str->{}))
+            .setColors(Configuration.createColors())
+            .setCommnads(Configuration.createCommands())
+            .setShapes(Configuration.createShapes())
             .build();
 
+        /*var builder = AppPaintImpl.builder();
+        builder.setCanvas(null);
+        builder.setColors(null);
+        builder.setCommnads(null);
+        builder.setShapes(null);
+        var paint = builder.build();*/
+
         paint.run(new AddRunDto("add", 
-                    "rectangle", "black", 
+                    "cuadrado", "black", 
                     new Point(10,10), new Point(100,100)));
 
         System.out.println(Math.PI);

@@ -1,10 +1,11 @@
 package com.example.paint;
 
 import java.util.HashMap;
+import java.util.Map;
 import java.util.function.BiFunction;
 
 public class CommandFactoryImpl implements CommandFactory {
-    private final HashMap<String,BiFunction<Canvas, Shape, CommandBase>> commands = new HashMap<>(); 
+    private final Map<String,BiFunction<Canvas, Shape, CommandBase>> commands = new HashMap<>(); 
     public void register(String key, BiFunction<Canvas, Shape, CommandBase> command){
         commands.put(key, command);
     }

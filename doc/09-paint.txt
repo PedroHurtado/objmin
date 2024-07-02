@@ -13,14 +13,17 @@ SOLID Y PATRONES DE DISEÑO
         add rectangle 12,15 100,30 black
         add Rectangle(PointStart, PointEnd, Color)
 
-CommandPattern
-FuildInterface
-Builder
-Factory
-Strategy Pattern
+Patrones
+    CommandPattern
+    FuildInterface
+    Builder
+    Factory
+    Strategy Pattern
 
-Segregacion de interface (I)
 Principio de responsabiliad unica(S)
-Principio de inversion de dependencias(D)
-Principio de Liskow(L)
 Principio de abierto cerrado(O)
+Principio de Liskow(L)
+Segregacion de interface (I)
+Principio de inversion de dependencias(D)
+
+¿Quien ha trabajado así?
