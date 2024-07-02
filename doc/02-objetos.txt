@@ -1,0 +1,58 @@
+un conjunto de datos
+    atributos
+        coche->color
+        persona->altura        
+    metodos
+        functiones capaces de modificar el estado desarrollo
+        objeto
+    publicos privados protected
+    instancia tiene acceso solo a los metodos y atributos publicos
+    instancia no tiene acceso a los atributos privados
+    public para los herederos y privado para la variable de instancia
+
+
+    ¿Como puedo acceder a los metodos privados o protected?
+
+    c->this,
+    self->python,rust
+    Abap->Me
+
+foo = new Foo()
+foo==this(this tiene acceso a lo privado y public)
+instancia tien acceso a lo public
+
+
+
+
+que algunos se pueden instanciar
+
+Que es una clase Abstracta->
+No se pueden instanciar
+Herencia 
+
+public class abstract Vehiculo{
+
+}
+
+new Vehiculo()->No se puede hacer
+
+public  class Coche extends Vehiculo{
+
+}
+public class Moto extends Vehiculo{
+
+}
+
+public class Printer{
+    public print(Vehiculo vehiculo){
+        // TODO
+    }
+}
+
+
+Vehiculo vehiculo = new Coche(); //conversion implicita
+Coche coche = vehiculo;  //error de compilacion
+Coche coche = (Coche) vehiculo; //conversion explicita
+Printer printer = new Printer()
+printer.print(new Moto())
+printer.print(new Coche())

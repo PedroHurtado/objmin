@@ -1,0 +1,38 @@
+En mi sistema existen clientes que se 
+pueden add,remove,get,modificar
+Los usuarios del sistema solo se pueden leer
+
+Herrencia en java, c#
+
+es unica
+
+c++->implementa herencia multiple
+js,python->simulacion de herencia multiple con mixins
+
+interfaces
+
+public interface Repository{
+    void add();
+    void update();
+    void get();
+    void remove()
+}
+
+class Cliente implements Repository{
+    
+}
+class Usuario() implements Repository{
+    add(){
+        throw new ApplicationException()
+    }
+    upate(){
+        throw new ApplicationException()
+    }
+    remove(){
+        throw new ApplicationException()
+    }
+    get(){}
+}
+
+Usurario user = new Usuario();
+user.update(); //peligroso en produccion

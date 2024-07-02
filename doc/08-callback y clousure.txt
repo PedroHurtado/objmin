@@ -1,0 +1,25 @@
+1. callback  es pasar una metodo como argumento a otro metodo
+
+    App.PrintAveNoVoladora(new Pinguino(5), System.out::println);
+
+    public static void PrintAveVoladora(AveVoladora aveVoladora, Consumer<Object> printer){
+        printer.accept(aveVoladora.toString());
+    }
+2. Clousure
+    es un metodo que devuelve otro metodo
+
+    function events(node,event,cb){
+        node.addEventListener(event,cb)
+        return ()=>node.removeEventListener(event,cb)
+    }
+
+    function sum(a){
+        return (b)=>a+b
+    }
+
+    sum(5)(3)
+
+    const result = sum(5)
+
+    result(100)
+    result(30)

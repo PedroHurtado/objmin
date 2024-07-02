@@ -1,0 +1,17 @@
+
+Análisis y Diseño orientado a objetos.
+
+Introducción al proceso de desarrollo de software y a UML
+Principios fundamentales de orientación a objetos: 
+    objetos, 
+    clases, 
+    abstracción, 
+    cohesión, 
+    acoplamiento, 
+    encapsulación, 
+    herencia, 
+    polimorfismo
+    https://es.wikipedia.org/wiki/SOLID
+    https://refactoring.guru/es/design-patterns
+Notación UML
+Lenguaje OCL

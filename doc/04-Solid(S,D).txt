@@ -1,0 +1,29 @@
+//He incumplido dos principios
+//S->dos calcula una nueva fecha y la imprime
+//D->Porque tenemos una dependencia fuerte del consol.log
+
+//Producción-Incorrecto
+function printDate(){
+ console.log(new Date())
+}
+
+
+
+
+
+//Producción-Correcto
+function printDate(date,writer){
+   writer(date)
+}
+printDate(new Date(), console.log)
+
+//test
+const date = new Date()
+const writer = (d)=>console.log(d===date)
+
+
+//produccion
+const suma = (a,b)=>a*b
+//testing
+console.log(suma(5,3)===8)
+

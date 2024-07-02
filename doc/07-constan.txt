@@ -1,0 +1,55 @@
+una variable que no se puede modificar
+
+c++
+c#->readonly
+javascript
+    const 
+python
+    no existe PI=3.1416
+java
+    public static final Double PI=3.1416
+
+¿Cuando deberia utilizar final?
+
+    cuando solamente una variable se pueda inicializar en 
+    el constructor
+
+public abstract class Ave{
+    public final Integer peso;
+    public Ave(Integer peso){
+        this.peso = peso
+    }
+    public Integer getPeso(){
+        return peso;
+    }
+    public Integer setPeso(Integer value){
+        peso = value // error de compilacion
+    }
+}
+
+final como parametro del constructor
+
+interface IA{
+
+}
+interface IB{
+    
+}
+interface IC{
+    
+}
+class A implements IA{
+    private final Ib b;
+    public A(final IB b){
+        //b=null;error
+        this.b = b;
+    }
+}
+class B implements IB{
+
+}
+class C implements IC{
+
+}
+
+IA a = new A(new B(new C()))

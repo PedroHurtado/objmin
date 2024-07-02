@@ -1,0 +1,8 @@
+var a=1->infiere un integer a la variable a
+debilmente tipados
+    javascript
+    python
+fuertemente tipados
+    c++     auto
+    java    var
+    c#      var
