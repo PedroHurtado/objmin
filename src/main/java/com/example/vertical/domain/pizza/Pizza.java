@@ -23,7 +23,7 @@ public class Pizza extends BaseEntity {
         this.url = url;
     }
 
-    public List<Ingredient> getIngredient(){
+    public List<Ingredient> getIngredients(){
         return ingredients.stream().toList();
     }
     public String getName() {

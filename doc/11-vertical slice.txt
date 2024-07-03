@@ -14,3 +14,23 @@ Vertical Slice
 		BB.DD
 		Servicios
     https://www.jimmybogard.com/vertical-slice-architecture/
+
+
+	User->Controlador->(1)UseCase->Repository
+
+Validacion
+Logger
+Transaccionalidad
+
+1.Mediator-> Validation.before
+	     Logger.before
+	     Trasaction.before
+	     Add->UseCase
+	     Validation.after
+             Logger.After
+             Trasaction.After
+
+https://github.com/jbogard/MediatR
+https://github.com/sizovs/PipelinR
+
+https://refactoring.guru/design-patterns/mediator#:~:text=Solution,the%20calls%20to%20appropriate%20components.
