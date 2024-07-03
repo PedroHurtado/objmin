@@ -6,7 +6,7 @@ import java.util.UUID;
 import com.example.vertical.domain.pizza.Ingredient;
 import com.example.vertical.domain.pizza.Pizza;
 
-//Controlador
+
 public class CreatePizza {
 
     public record Request(String name, String description, String url) {
@@ -21,31 +21,29 @@ public class CreatePizza {
     }
 
     private final UseCase useCase;
-
+    
     public CreatePizza(UseCase useCase) {
         this.useCase = useCase;
     }
-
+    // Controller
     public Response add(Request request) {
         return useCase.add(request);
     }
-
     // UseCase
     private interface UseCase {
         Response add(Request request);
     }
-
-    private static class UseCaseImp implements UseCase {
+    private static class UseCaseImp implements UseCase {        
+        
         private final Repository repository;
-
         public UseCaseImp(Repository repository) {
             this.repository = repository;
         }
 
         @Override
         public Response add(Request request) {
-            // Logger
             // Validation
+            // Logger            
             // Transaction
             var pizza = Pizza.create(
                     UUID.randomUUID(),
@@ -54,7 +52,7 @@ public class CreatePizza {
                     request.url());
 
             repository.add(pizza);
-            
+
             return new Response(
                     pizza.getId(),
                     pizza.getName(),
@@ -65,16 +63,10 @@ public class CreatePizza {
         }
 
     }
-
-    public static CreatePizza resolver() {
-        return new CreatePizza(new UseCaseImp(new RepositoryImp()));
-    }
-
     // Repository
     private interface Repository {
         void add(Pizza pizza);
     }
-
     private static class RepositoryImp implements Repository {
 
         @Override
@@ -82,5 +74,11 @@ public class CreatePizza {
 
         }
 
+    }
+    //IOC
+    public static CreatePizza resolver() {
+        var respository = new RepositoryImp();
+        var useCase = new UseCaseImp(respository);
+        return new CreatePizza(useCase);
     }
 }

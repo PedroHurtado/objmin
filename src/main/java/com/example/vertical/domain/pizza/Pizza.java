@@ -36,6 +36,11 @@ public class Pizza extends BaseEntity {
         return url;
     }
     public double getPrice(){
+
+        //ingredients.stream().map(i->i.getPrice()).reduce(0D,(acumulador,numero)-> {
+        //    return acumulador+numero;
+        //  })) * Pizza.PFOFIF;
+        
         var price =0D;
         for (Ingredient ingredient : ingredients) {
             price+=ingredient.getPrice();
