@@ -1,0 +1,15 @@
+Vertical Slice
+	Domain(X)
+	Controller(X)
+		Libinano
+	UseCase(X)
+		Creamos nuestras entidades
+		POA
+			Validacion de datos		@validate
+			if(request.isValid()){
+                        }
+			Logger				@logger
+			Transaccionalidad		@transaction
+	Infraestructura()
+		BB.DD
+		Servicios
