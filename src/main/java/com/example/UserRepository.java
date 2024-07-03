@@ -9,8 +9,7 @@ public class UserRepository implements Get<User,String> {
  }
 
 @Override
-public List<User> getList() {
-   // TODO Auto-generated method stub
+public List<User> getList() {   
    throw new UnsupportedOperationException("Unimplemented method 'getList'");
 }
     

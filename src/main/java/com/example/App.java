@@ -5,8 +5,6 @@ import java.util.List;
 import java.util.function.Consumer;
 
 import com.example.paint.AddRunDto;
-import com.example.paint.AppBuilder;
-import com.example.paint.AppPaint;
 import com.example.paint.AppPaintImpl;
 import com.example.paint.Configuration;
 import com.example.paint.Point;

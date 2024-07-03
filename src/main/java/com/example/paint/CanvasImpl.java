@@ -8,7 +8,7 @@ public class CanvasImpl implements Canvas {
     private List<Shape> shapes = new ArrayList<>();
     private final Consumer<String> printer;
     public CanvasImpl(Consumer<String> printer){
-        this.printer =printer;
+        this.printer =printer;        
     }
 
     private void print(){
