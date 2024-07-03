@@ -9,11 +9,20 @@ import com.example.vertical.core.BaseEntity;
 
 public class Pizza extends BaseEntity {
 
-    private static final Double PFOFIF = 1.2D;
+    public static final Double PFOFIF = 1.2D;
+    
     private String name;
     private String description;
     private String url;
     private Set<Ingredient> ingredients = new HashSet<>();  
+
+    protected Pizza(UUID id, String name, String description, String url) {
+        super(id);        
+        this.name = name;
+        this.description = description;
+        this.url = url;
+    }
+
     public List<Ingredient> getIngredient(){
         return ingredients.stream().toList();
     }
@@ -43,13 +52,7 @@ public class Pizza extends BaseEntity {
         this.name = name;
         this.description = description;
         this.url = url;
-    }
-    protected Pizza(UUID id, String name, String description, String url) {
-        super(id);        
-        this.name = name;
-        this.description = description;
-        this.url = url;
-    }
+    }    
     public static Pizza create(UUID id, String name, String description, String url){
         return new Pizza(id, name, description, url);
     }

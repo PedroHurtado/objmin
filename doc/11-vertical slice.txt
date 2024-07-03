@@ -13,3 +13,4 @@ Vertical Slice
 	Infraestructura()
 		BB.DD
 		Servicios
+    https://www.jimmybogard.com/vertical-slice-architecture/
