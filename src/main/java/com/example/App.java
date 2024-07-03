@@ -8,6 +8,8 @@ import com.example.paint.AddRunDto;
 import com.example.paint.AppPaintImpl;
 import com.example.paint.Configuration;
 import com.example.paint.Point;
+import com.example.vertical.features.pizza.CreatePizza;
+import com.example.vertical.features.pizza.CreatePizza.Request;
 
 /**
  * Hello world!
@@ -19,6 +21,11 @@ public class App
     {
         //Consumer<String> print = (str)->{};
 
+        var createPizza = CreatePizza.resolver();
+        Request request = new Request("Carbonara", "La pizza es genial", "url");
+        var response = createPizza.add(request);
+        System.out.print(response);
+        
         var paint=AppPaintImpl.builder()
             //.setCanvas(Configuration.createCanvas(System.out::println))
             .setCanvas(Configuration.createCanvas(str->{}))
